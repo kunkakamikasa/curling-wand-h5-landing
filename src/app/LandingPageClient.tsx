@@ -108,15 +108,54 @@ export default function LandingPageClient() {
       <section className="hero-section">
         <div className="hero-copy">
           <p className="eyebrow">9mm tiny curling wand</p>
-          <h1>Show the wand and the curl result in the first screen.</h1>
+          <div className="hero-proof-mobile">
+            <div className="hero-proof-mobile-head">
+              <span className="visual-kicker">First-screen proof</span>
+              <div className="hero-badge-row">
+                <span className="hero-badge">Product view</span>
+                <span className="hero-badge">Result preview</span>
+              </div>
+            </div>
+            <div className="hero-proof-stage">
+              <div className="product-shot-card">
+                <div className="wand-product-illustration" aria-hidden="true">
+                  <span className="wand-tip" />
+                  <span className="wand-barrel" />
+                  <span className="wand-handle" />
+                  <span className="wand-cord" />
+                </div>
+                <div className="product-shot-copy">
+                  <strong>9mm small barrel wand</strong>
+                  <p>Show the slim barrel shape immediately, before any long explanation starts.</p>
+                </div>
+              </div>
+
+              <div className="result-preview-card">
+                <div className="result-preview-head">
+                  <span>Expected look</span>
+                  <strong>Tighter, more defined curls</strong>
+                </div>
+                <div className="curl-preview-grid" aria-hidden="true">
+                  <div className="curl-preview before-state">
+                    <span className="preview-tag">Before</span>
+                    <span className="hair-shape hair-shape-before" />
+                  </div>
+                  <div className="curl-preview after-state">
+                    <span className="preview-tag">After</span>
+                    <span className="hair-shape hair-shape-after" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h1>Tiny barrel curls that look tighter, fuller, and more defined.</h1>
           <p className="hero-subtitle">
-            Cold Pinterest and Instagram traffic should immediately understand what the
-            product looks like and what kind of curl result it creates.
+            See the wand shape and the expected curl result right away, so cold social
+            traffic knows what this tool is before clicking out.
           </p>
           <p className="hero-note">
-            This is not an automatic hair curler. It is a slim small barrel curling
-            wand for tighter curl definition, more visible texture, and a denser
-            finished shape.
+            Not an automatic hair curler. This is a slim small barrel curling wand made
+            for tighter curl definition, more visible texture, and a denser finish.
           </p>
 
           <div className="cta-group">
@@ -126,19 +165,15 @@ export default function LandingPageClient() {
             <a className="cta-secondary" href="#results">
               See curl results
             </a>
-            <a className="cta-secondary" href="#how-it-works">
-              See how it works
-            </a>
           </div>
 
           <ul className="trust-list">
-            <li>Lead with visual product evidence instead of only explanatory copy</li>
-            <li>Clarify the product type before the marketplace click</li>
-            <li>Use result-first framing for cold social traffic</li>
+            <li>See the tool shape before leaving for the shop page</li>
+            <li>See the tighter curl direction before the outbound click</li>
           </ul>
         </div>
 
-        <div className="hero-card">
+        <div className="hero-card hero-card-desktop">
           <div className="hero-visual hero-proof-visual">
             <div className="hero-visual-top">
               <span className="visual-kicker">Above the fold proof</span>

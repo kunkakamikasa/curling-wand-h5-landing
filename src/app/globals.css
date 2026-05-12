@@ -107,6 +107,19 @@ summary:focus-visible {
   justify-content: center;
 }
 
+.hero-proof-mobile {
+  display: none;
+}
+
+.hero-proof-mobile-head {
+  display: grid;
+  gap: 12px;
+}
+
+.hero-card-desktop {
+  display: flex;
+}
+
 .hero-proof-visual {
   position: relative;
 }
@@ -691,16 +704,80 @@ summary:focus-visible {
     padding: 0;
   }
 
-  .hero-metrics {
-    grid-template-columns: 1fr;
+  .hero-copy {
+    gap: 16px;
+  }
+
+  .hero-proof-mobile {
+    display: grid;
+    gap: 14px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .hero-card-desktop,
+  .hero-proof-list {
+    display: none;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(30px, 9vw, 44px);
+    line-height: 1;
+  }
+
+  .hero-subtitle,
+  .hero-note,
+  .trust-list li,
+  .section-heading p,
+  .pain-card p,
+  .step-card p,
+  .result-body p,
+  .bottom-cta p,
+  .hero-visual p,
+  .result-body span {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .trust-list {
+    gap: 10px;
   }
 
   .wand-product-illustration {
-    min-height: 260px;
+    min-height: 180px;
+  }
+
+  .wand-barrel {
+    top: 36px;
+    height: 96px;
+  }
+
+  .wand-handle {
+    top: 120px;
+    height: 84px;
+  }
+
+  .wand-cord {
+    width: 78px;
+    height: 48px;
+  }
+
+  .curl-preview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
   .curl-preview {
-    min-height: 220px;
+    min-height: 150px;
+    padding: 10px;
+  }
+
+  .hair-shape-before {
+    height: 122px;
+  }
+
+  .hair-shape-after {
+    height: 130px;
   }
 
   .cta-group {
