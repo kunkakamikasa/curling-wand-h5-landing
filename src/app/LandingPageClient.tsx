@@ -17,6 +17,11 @@ type ResultCard = {
   note: string;
 };
 
+type HeroProof = {
+  title: string;
+  detail: string;
+};
+
 const productUrl = "https://www.tiktok.com/";
 
 const painPoints: PainPoint[] = [
@@ -82,26 +87,44 @@ const resultCards: ResultCard[] = [
   },
 ];
 
+const heroProofs: HeroProof[] = [
+  {
+    title: "What the shopper should see first",
+    detail: "The actual wand shape, slim barrel size, and a more realistic product silhouette.",
+  },
+  {
+    title: "What result they need to believe",
+    detail: "Tighter ringlet-style definition, more texture, and a more visible curl finish than a standard barrel.",
+  },
+  {
+    title: "Why this fixes the bounce problem",
+    detail: "Cold Pinterest / Instagram traffic gets visual evidence before the outbound shop click.",
+  },
+];
+
 export default function LandingPageClient() {
   return (
     <main className="landing-shell">
       <section className="hero-section">
         <div className="hero-copy">
           <p className="eyebrow">9mm tiny curling wand</p>
-          <h1>Small barrel curls with a tighter, more defined finish.</h1>
+          <h1>Show the wand and the curl result in the first screen.</h1>
           <p className="hero-subtitle">
-            Built for Pinterest and Instagram traffic that needs one more layer of
-            explanation before the purchase click.
+            Cold Pinterest and Instagram traffic should immediately understand what the
+            product looks like and what kind of curl result it creates.
           </p>
           <p className="hero-note">
-            This is not an automatic hair curler. It is a small barrel curling wand
-            for shoppers who want tighter curls, more texture, and a more visible
-            curl pattern.
+            This is not an automatic hair curler. It is a slim small barrel curling
+            wand for tighter curl definition, more visible texture, and a denser
+            finished shape.
           </p>
 
           <div className="cta-group">
             <a className="cta-primary" href={productUrl} target="_blank" rel="noreferrer">
               Shop now
+            </a>
+            <a className="cta-secondary" href="#results">
+              See curl results
             </a>
             <a className="cta-secondary" href="#how-it-works">
               See how it works
@@ -109,29 +132,61 @@ export default function LandingPageClient() {
           </div>
 
           <ul className="trust-list">
-            <li>Correctly framed as a tiny curling wand, not an automatic curler</li>
-            <li>Built to explain the value before sending traffic to the product page</li>
-            <li>Focused on mobile-first natural traffic conversion</li>
+            <li>Lead with visual product evidence instead of only explanatory copy</li>
+            <li>Clarify the product type before the marketplace click</li>
+            <li>Use result-first framing for cold social traffic</li>
           </ul>
         </div>
 
         <div className="hero-card">
-          <div className="hero-visual">
-            <span className="visual-kicker">Hero</span>
-            <h2>Mobile-first pre-sell layer for social traffic</h2>
-            <p>
-              First-screen messaging clarifies the product type, the styling result,
-              and why this tool is different from a standard wider barrel.
-            </p>
-            <div className="hero-metrics">
-              <div>
-                <strong>PRODUCT</strong>
-                <span>9mm tiny curling wand</span>
+          <div className="hero-visual hero-proof-visual">
+            <div className="hero-visual-top">
+              <span className="visual-kicker">Above the fold proof</span>
+              <div className="hero-badge-row">
+                <span className="hero-badge">Product view</span>
+                <span className="hero-badge">Result preview</span>
               </div>
-              <div>
-                <strong>TRAFFIC</strong>
-                <span>Pinterest / Instagram</span>
+            </div>
+
+            <div className="hero-proof-stage">
+              <div className="product-shot-card">
+                <div className="wand-product-illustration" aria-hidden="true">
+                  <span className="wand-tip" />
+                  <span className="wand-barrel" />
+                  <span className="wand-handle" />
+                  <span className="wand-cord" />
+                </div>
+                <div className="product-shot-copy">
+                  <strong>9mm small barrel wand</strong>
+                  <p>Slim barrel shape shown directly in the hero instead of hiding it below the fold.</p>
+                </div>
               </div>
+
+              <div className="result-preview-card">
+                <div className="result-preview-head">
+                  <span>Expected look</span>
+                  <strong>Tighter, more defined curls</strong>
+                </div>
+                <div className="curl-preview-grid" aria-hidden="true">
+                  <div className="curl-preview before-state">
+                    <span className="preview-tag">Before</span>
+                    <span className="hair-shape hair-shape-before" />
+                  </div>
+                  <div className="curl-preview after-state">
+                    <span className="preview-tag">After</span>
+                    <span className="hair-shape hair-shape-after" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="hero-proof-list">
+              {heroProofs.map((item) => (
+                <article className="hero-proof-item" key={item.title}>
+                  <strong>{item.title}</strong>
+                  <p>{item.detail}</p>
+                </article>
+              ))}
             </div>
           </div>
         </div>
@@ -183,8 +238,8 @@ export default function LandingPageClient() {
           <p className="section-kicker">Visible results</p>
           <h2>Set expectation around the finished look before the outbound click.</h2>
           <p>
-            This section is a first-pass placeholder for future result media, while
-            the structure stays fixed.
+            This first version still needs real media, but the section now frames the
+            exact visual proof the shopper expects to see before leaving the page.
           </p>
         </div>
 
@@ -192,7 +247,11 @@ export default function LandingPageClient() {
           {resultCards.map((card) => (
             <article className="result-card" key={card.title}>
               <div className="result-media-placeholder">
-                <span>Result media placeholder</span>
+                <div className="result-placeholder-visual" aria-hidden="true">
+                  <span className="result-chip">Preview</span>
+                  <span className="result-hair result-hair-top" />
+                  <span className="result-hair result-hair-bottom" />
+                </div>
               </div>
               <div className="result-body">
                 <strong>{card.title}</strong>
